@@ -4,6 +4,7 @@ while True:
     print ("2. tong so luong so chan va so le")
     print ("3. tich so chan va so le")
     print ("4. tìm số lớn nhất")
+    print ("5. tim so nho nhat")
     print ("6. Thoat")
     
     chosse = int(input("Nhap lua chon cua ban: "))
@@ -50,6 +51,13 @@ while True:
         lonnhat = max(dayso)
         print("So lon nhat la: ", lonnhat)
         
+    elif chosse == 5:
+        nhap = input("Nhap day so: ")
+        dayso = [int (a) for a in nhap]
+        nhonhat = min(dayso)
+        print("So nho nhat la: ", nhonhat)
+        
+    
     elif chosse == 6:
         print ("Thoat chuong trinh")
         break    
