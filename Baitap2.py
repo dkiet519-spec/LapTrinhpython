@@ -3,6 +3,7 @@ while True:
     print ("1. so luong chan va so le")
     print ("2. tong so luong so chan va so le")
     print ("3. tich so chan va so le")
+    print ("4. tìm số lớn nhất")
     print ("6. Thoat")
     
     chosse = int(input("Nhap lua chon cua ban: "))
@@ -28,7 +29,28 @@ while True:
         while n > 0:
             chuso = n % 10
             if chuso % 2 == 0:
-                tong = tong + ( chuso % 10)   
-                chuso //= 10
+                tong = tong + chuso
+            n //= 10
         print("Tong so luong so chan va so le la: ", tong)
+    
+    elif chosse == 3:
+        n = int (input("Nhap luong so: "))
+        chuso = n
+        tich = 1
+        while n > 0:
+            chuso = n % 10
+            if chuso % 2 == 0:
+                tich = tich * chuso
+            n //= 10
+        print("Tich so luong so chan va so le la: ", tich)
+        
+    elif chosse == 4:
+        nhap = input("Nhap day so: ")
+        dayso = [int (a) for a in nhap]
+        lonnhat = max(dayso)
+        print("So lon nhat la: ", lonnhat)
+        
+    elif chosse == 6:
+        print ("Thoat chuong trinh")
+        break    
 
